@@ -1,22 +1,9 @@
 {
   "name": "vscode-mezzurite",
-  "description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
   "displayName": "Mezzurite",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "license": "MIT",
   "version": "0.0.1",
-  "repository": {
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git",
-    "type": "git"
-  },
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "publisher": "mezzurite-devs",
+  "private": "false",
+  "description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
   "categories": [
     "Linters",
     "Snippets"
@@ -27,13 +14,32 @@
     "React",
     "single page application"
   ],
-  "engines": {
-    "vscode": "1.31.1"
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
   },
-  "activationEvents": [
-    "*"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
   "main": "./client/out/extension",
+  "scripts": {
+    "compile": "tsc -b",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+    "lint": "tslint -p ./tslint.json",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "test": "jest",
+    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "watch": "tsc -b -w"
+  },
   "contributes": {
     "views": {
       "explorer": [
@@ -44,15 +50,9 @@
       ]
     }
   },
-  "scripts": {
-    "compile": "tsc -b",
-    "lint": "tslint -p ./tslint.json",
-    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-    "test": "jest",
-    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
-    "watch": "tsc -b -w",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
-  },
+  "activationEvents": [
+    "*"
+  ],
   "devDependencies": {
     "@types/jest": "29.5.6",
     "@types/node": "20.8.9",
@@ -63,9 +63,9 @@
     "typescript": "5.2.2",
     "typescript-esbuild": "0.3.1"
   },
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "type": "module",
-  "private": "false",
+  "engines": {
+    "vscode": "1.31.1"
+  },
   "publishConfig": {
     "access": "public"
   }
