@@ -2,12 +2,12 @@
 
 // @ts-ignore
 @Component({
-	selector: "barrel",
-	templateUrl: "./badTemplateUrl.html",
+  selector: 'barrel',
+  templateUrl: './badTemplateUrl.html'
 })
 // @ts-ignore
 export class BadTemplateUrlInstrumentedComponent implements OnInit {
-	public ngOnInit() {
-		console.log("hello `Barrel` component");
-	}
+  public ngOnInit () {
+    console.log('hello `Barrel` component');
+  }
 }

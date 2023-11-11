@@ -1,11 +1,11 @@
-function isNgModule(fileContents: string): boolean {
-	let isNgModule = false;
+function isNgModule (fileContents: string): boolean {
+  let isNgModule = false;
 
-	if (fileContents != null) {
-		isNgModule = fileContents.indexOf("@NgModule") >= 0;
-	}
+  if (fileContents != null) {
+    isNgModule = fileContents.indexOf('@NgModule') >= 0;
+  }
 
-	return isNgModule;
+  return isNgModule;
 }
 
 export default isNgModule;
