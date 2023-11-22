@@ -1,60 +1,59 @@
 {
-	"name": "vscode-mezzurite",
-	"displayName": "Mezzurite",
-	"version": "2.1.0",
-	"description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
-	"categories": [
-		"Linters",
-		"Snippets"
-	],
-	"keywords": [
-		"Microsoft",
-		"Angular",
-		"React",
-		"single page application"
-	],
-	"bugs": {
-		"url": "https://github.com/Microsoft/vscode-mezzurite"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-mezzurite"
-	},
-	"license": "MIT",
-	"author": "Microsoft Corporation",
-	"publisher": "mezzurite-devs",
-	"main": "./client/out/extension",
-	"scripts": {
-		"compile": "tsc -b",
-		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-		"lint": "tslint -p ./tslint.json",
-		"test": "jest",
-		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
-		"watch": "tsc -b -w"
-	},
-	"contributes": {
-		"views": {
-			"explorer": [
-				{
-					"id": "mezzuriteComponentList",
-					"name": "Mezzurite Component Tracking"
-				}
-			]
-		}
-	},
-	"activationEvents": [
-		"*"
-	],
-	"devDependencies": {
-		"@types/jest": "29.5.8",
-		"@types/node": "20.9.2",
-		"jest": "29.7.0",
-		"ts-jest": "29.1.1",
-		"tslint": "5.20.1",
-		"tslint-config-semistandard": "8.0.1",
-		"typescript": "5.2.2"
-	},
-	"engines": {
-		"vscode": "1.31.1"
-	}
+  "name": "vscode-mezzurite",
+  "displayName": "Mezzurite",
+  "version": "0.0.1",
+  "description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "main": "./client/out/extension",
+  "scripts": {
+    "compile": "tsc -b",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+    "lint": "tslint -p ./tslint.json",
+    "test": "jest",
+    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "watch": "tsc -b -w",
+    "prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
+  },
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "mezzuriteComponentList",
+          "name": "Mezzurite Component Tracking"
+        }
+      ]
+    }
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "devDependencies": {
+    "@types/jest": "29.5.10",
+    "@types/node": "20.9.4",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.1",
+    "tslint": "5.20.1",
+    "tslint-config-semistandard": "8.0.1",
+    "typescript": "5.3.2",
+    "typescript-esbuild": "0.3.1"
+  },
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "type": "module",
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  }
 }
