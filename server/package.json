@@ -1,37 +1,23 @@
 {
-	"name": "vscode-mezzurite-server",
-	"version": "0.0.1",
-	"private": "false",
-	"description": "Example implementation of a language server in node.",
-	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Nikola Hristov",
-		"email": "nikola@nikolahristov.tech",
-		"url": "https://nikolahristov.tech"
-	},
-	"publisher": "playform",
-	"type": "module",
-	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
-	},
-	"dependencies": {
-		"globby": "14.0.0",
-		"ts-morph": "21.0.1",
-		"vscode-languageserver": "9.0.1"
-	},
-	"devDependencies": {
-		"@types/globby": "8.0.0",
-		"typescript-esbuild": "0.3.2"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "vscode-mezzurite-server",
+  "description": "Example implementation of a language server in node.",
+  "version": "1.0.0",
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/vscode-extension-samples"
+  },
+  "dependencies": {
+    "globby": "^9.1.0",
+    "ts-morph": "^1.3.0",
+    "vscode-languageserver": "^4.4.2"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/globby": "^8.0.0"
+  }
 }
