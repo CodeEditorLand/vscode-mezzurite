@@ -1,36 +1,17 @@
 {
-	"name": "vscode-mezzurite-client",
-	"version": "0.0.1",
-	"private": false,
+	"dependencies": {
+		"vscode-languageclient": "9.0.1"
+	},
 	"description": "VSCode part of a language server",
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	"devDependencies": {
+		"typescript-esbuild": "0.4.5",
+		"vscode": "1.1.33"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Playform",
-		"email": "Hello@Playform.Cloud",
-		"url": "https://playform.cloud"
-	},
-	"type": "module",
+	"name": "vscode-mezzurite-client",
 	"scripts": {
 		"postinstall": "vscode-install",
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
 		"update-vscode": "vscode-install"
 	},
-	"dependencies": {
-		"vscode-languageclient": "9.0.1"
-	},
-	"devDependencies": {
-		"typescript-esbuild": "0.4.5",
-		"vscode": "1.1.33"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+	"type": "module"
 }
