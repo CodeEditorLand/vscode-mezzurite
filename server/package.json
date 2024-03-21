@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@types/globby": "8.0.0",
-		"typescript-esbuild": "latest"
+		"typescript-esbuild": "0.4.5"
 	},
 	"publishConfig": {
 		"access": "public"

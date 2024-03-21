@@ -27,7 +27,7 @@
 		"vscode-languageclient": "9.0.1"
 	},
 	"devDependencies": {
-		"typescript-esbuild": "latest",
+		"typescript-esbuild": "0.4.5",
 		"vscode": "1.1.33"
 	},
 	"publishConfig": {
