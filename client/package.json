@@ -1,37 +1,37 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandMezzurite/issues"
-	},
-	"dependencies": {},
+	"name": "vscode-mezzurite-client",
+	"version": "0.0.1",
+	"private": false,
 	"description": "VSCode part of a language server",
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6"
-	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandMezzurite#readme",
 	"keywords": [
 		"land"
 	],
-	"license": "SEE LICENSE IN LICENSE",
-	"name": "vscode-mezzurite-client",
-	"private": false,
-	"publishConfig": {
-		"access": "public"
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandMezzurite#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandMezzurite/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+HTTPS://github.com/CodeEditorLand/LandMezzurite.git"
 	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'",
 		"update-vscode": "vscode-install"
 	},
-	"type": "module",
-	"version": "0.0.1"
+	"dependencies": {},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
