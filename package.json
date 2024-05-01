@@ -44,8 +44,8 @@
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"@types/node": "^11.9.4",
-		"tslint-config-semistandard": "^7.0.0"
+		"@types/node": "20.12.7",
+		"tslint-config-semistandard": "8.0.1"
 	},
 	"publishConfig": {
 		"access": "public"
