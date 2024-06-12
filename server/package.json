@@ -1,11 +1,11 @@
 {
 	"dependencies": {
-		"globby": "^14.0.1",
-		"ts-morph": "^22.0.0"
+		"globby": "14.0.1",
+		"ts-morph": "22.0.0"
 	},
 	"description": "Example implementation of a language server in node.",
 	"devDependencies": {
-		"@types/globby": "^8.0.0"
+		"@types/globby": "8.0.0"
 	},
 	"name": "vscode-mezzurite-server",
 	"scripts": {}
