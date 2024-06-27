@@ -4,7 +4,7 @@
 	"scripts": {},
 	"dependencies": {
 		"globby": "14.0.1",
-		"ts-morph": "22.0.0"
+		"ts-morph": "23.0.0"
 	},
 	"devDependencies": {
 		"@types/globby": "9.1.0"
