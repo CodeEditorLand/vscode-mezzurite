@@ -3,7 +3,7 @@
 	"description": "Example implementation of a language server in node.",
 	"scripts": {},
 	"dependencies": {
-		"globby": "14.0.1",
+		"globby": "14.0.2",
 		"ts-morph": "23.0.0"
 	},
 	"devDependencies": {
