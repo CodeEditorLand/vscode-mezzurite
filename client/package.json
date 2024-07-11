@@ -1,9 +1,0 @@
-{
-	"name": "vscode-mezzurite-client",
-	"description": "VSCode part of a language server",
-	"scripts": {
-		"update-vscode": "vscode-install"
-	},
-	"dependencies": {},
-	"devDependencies": {}
-}
