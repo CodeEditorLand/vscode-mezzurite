@@ -60,7 +60,7 @@ config.
 This extension will be Activated automatically for the active workspace in vs
 code editor, provided the workspace have a mezzurite dependency.
 
-## Installation
+## 🚀 Installation
 
 To install, click on the "Install" button above and open with visual studio
 code, which will bring up the Extensions view in the editor.
