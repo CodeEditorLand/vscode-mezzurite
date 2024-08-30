@@ -1,8 +1,0 @@
-.vscode/**
-src/**
-.gitignore
-**/tsconfig.json
-**/tslint.json
-**/*.map
-**/*.ts
-jest.config.js
