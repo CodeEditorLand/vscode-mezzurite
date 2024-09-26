@@ -20,7 +20,7 @@
 		"*"
 	],
 	"devDependencies": {
-		"@types/node": "22.6.0",
+		"@types/node": "22.7.2",
 		"tslint-config-semistandard": "8.0.1"
 	}
 }
