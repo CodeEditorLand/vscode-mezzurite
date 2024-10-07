@@ -1,7 +1,7 @@
 {
 	"dependencies": {
 		"globby": "14.0.2",
-		"ts-morph": "23.0.0"
+		"ts-morph": "24.0.0"
 	},
 	"description": "Example implementation of a language server in node.",
 	"devDependencies": {
