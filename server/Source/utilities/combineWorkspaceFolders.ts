@@ -1,22 +1,24 @@
-import { WorkspaceFolder } from 'vscode-languageserver';
-import extractSourceFiles from './extractSourceFiles';
+import { WorkspaceFolder } from "vscode-languageserver";
 
-function combineWorkspaceFolders (folders: WorkspaceFolder[]): string[] {
-  let filePaths: string[] = [];
+import extractSourceFiles from "./extractSourceFiles";
 
-  if (folders != null && folders.length > 0) {
-    folders.forEach((folder: WorkspaceFolder): void => {
-      if (folder != null) {
-        const folderFilePaths = extractSourceFiles(folder.uri)
-          .filter((file: string): boolean => {
-            return file != null;
-          });
-        filePaths = [ ...filePaths, ...folderFilePaths ];
-      }
-    });
-  }
+function combineWorkspaceFolders(folders: WorkspaceFolder[]): string[] {
+	let filePaths: string[] = [];
 
-  return filePaths;
+	if (folders != null && folders.length > 0) {
+		folders.forEach((folder: WorkspaceFolder): void => {
+			if (folder != null) {
+				const folderFilePaths = extractSourceFiles(folder.uri).filter(
+					(file: string): boolean => {
+						return file != null;
+					},
+				);
+				filePaths = [...filePaths, ...folderFilePaths];
+			}
+		});
+	}
+
+	return filePaths;
 }
 
 export default combineWorkspaceFolders;
