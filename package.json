@@ -1,11 +1,7 @@
 {
-	"name": "vscode-mezzurite",
-	"displayName": "Mezzurite",
-	"description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
-	"main": "./client/out/extension",
-	"scripts": {
-		"compile": "tsc -b"
-	},
+	"activationEvents": [
+		"*"
+	],
 	"contributes": {
 		"views": {
 			"explorer": [
@@ -16,11 +12,15 @@
 			]
 		}
 	},
-	"activationEvents": [
-		"*"
-	],
+	"description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
 	"devDependencies": {
 		"@types/node": "22.7.5",
 		"tslint-config-semistandard": "8.0.1"
+	},
+	"displayName": "Mezzurite",
+	"main": "./client/out/extension",
+	"name": "vscode-mezzurite",
+	"scripts": {
+		"compile": "tsc -b"
 	}
 }
