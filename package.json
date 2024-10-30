@@ -14,7 +14,7 @@
 	},
 	"description": "Instrument your application with the Mezzurite SDK quickly and easily with this extension.",
 	"devDependencies": {
-		"@types/node": "22.8.2",
+		"@types/node": "22.8.4",
 		"tslint-config-semistandard": "8.0.1"
 	},
 	"displayName": "Mezzurite",
