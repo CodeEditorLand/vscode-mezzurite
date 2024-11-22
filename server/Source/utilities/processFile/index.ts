@@ -14,7 +14,9 @@ function processFile(
 			readFile(filePath, (error: Error, data: Buffer) => {
 				if (error == null) {
 					let componentData: MezzuriteComponent = null;
+
 					const componentType = getComponentType(data.toString());
+
 					if (componentType != null) {
 						const sourceFile =
 							project.addExistingSourceFile(filePath);

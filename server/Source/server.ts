@@ -26,6 +26,7 @@ const connection = createConnection(ProposedFeatures.all);
 const documents: TextDocuments = new TextDocuments();
 
 let components: MezzuriteComponent[] = [];
+
 const project = new Project({
 	addFilesFromTsConfig: false,
 });
@@ -54,6 +55,7 @@ connection.onInitialized(() => {
 							console.warn(
 								`Unable to process ${filePath}: ${error}`,
 							);
+
 							return null;
 						},
 					);

@@ -13,6 +13,7 @@ function generateReact(
 
 		if (exportContents != null) {
 			let hasWithMezzurite = false;
+
 			let name = null;
 
 			if (exportContents.getKind() === SyntaxKind.Identifier) {
@@ -21,6 +22,7 @@ function generateReact(
 				const identifiers = exportContents.getDescendantsOfKind(
 					SyntaxKind.Identifier,
 				);
+
 				const lastIdentifier = identifiers[identifiers.length - 1];
 
 				if (lastIdentifier != null) {
@@ -55,6 +57,7 @@ function getExportContents(sourceFile: SourceFile): Node {
 			const exportAssignment = fileContents.getFirstChildByKind(
 				SyntaxKind.ExportAssignment,
 			);
+
 			if (exportAssignment != null) {
 				const defaultKeyword = exportAssignment
 					.getChildren()

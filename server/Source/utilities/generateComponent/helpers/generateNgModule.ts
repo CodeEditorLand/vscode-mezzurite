@@ -13,9 +13,11 @@ function generateNgModule(
 		const sourceClass = sourceFile.getClasses()[0];
 
 		const hasAngularPerfModule = containsAngularPerfImport(sourceClass);
+
 		const hasImport =
 			sourceFile.getImportDeclaration("@microsoft/mezzurite-angular") !=
 			null;
+
 		const hasRoutingServiceStart = containsRoutingServiceStart(sourceClass);
 
 		const name = sourceClass.getName();
@@ -37,6 +39,7 @@ function generateNgModule(
 
 function containsAngularPerfImport(sourceClass: ClassDeclaration): boolean {
 	const ngModuleDecorator = sourceClass.getDecorator("NgModule");
+
 	let containsAngularPerfImport = false;
 
 	if (ngModuleDecorator != null) {
@@ -50,15 +53,19 @@ function containsAngularPerfImport(sourceClass: ClassDeclaration): boolean {
 			const decoratorArgumentParameters = decoratorArgument
 				.getFirstChildByKind(SyntaxKind.SyntaxList)
 				.getChildren();
+
 			const importNode = decoratorArgumentParameters.find(
 				(argument: Node) => {
 					const isPropertyAssignment =
 						argument.getKind() === SyntaxKind.PropertyAssignment;
+
 					let hasImports = false;
+
 					if (isPropertyAssignment) {
 						const identifier = argument.getFirstChildByKind(
 							SyntaxKind.Identifier,
 						);
+
 						if (identifier.getText() === "imports") {
 							hasImports = true;
 						}
@@ -83,6 +90,7 @@ function containsAngularPerfImport(sourceClass: ClassDeclaration): boolean {
 
 function containsRoutingServiceStart(sourceClass: ClassDeclaration): boolean {
 	let containsRoutingServiceStart = false;
+
 	const constructors = sourceClass.getConstructors();
 
 	if (constructors.length > 0) {
@@ -94,6 +102,7 @@ function containsRoutingServiceStart(sourceClass: ClassDeclaration): boolean {
 		if (constructorParameters != null) {
 			const routingServiceType =
 				constructorParameters.getFirstChildByKind(SyntaxKind.TypeQuery);
+
 			if (constructorParameters != null) {
 				if (
 					routingServiceType.getText().indexOf("RoutingService") > -1

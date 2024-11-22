@@ -5,6 +5,7 @@ function extractSourceFiles(rootDirectory: string): string[] {
 	let normalized = rootDirectory;
 
 	const colonIndex = normalized.lastIndexOf(":");
+
 	if (colonIndex > -1) {
 		normalized = normalized.substring(colonIndex + 1);
 	}
@@ -19,6 +20,7 @@ function extractSourceFiles(rootDirectory: string): string[] {
 		join(normalized, "**", "*.+(js|jsx|ts|tsx)"),
 		join("!**", "node_modules"),
 	]);
+
 	return files;
 }
 

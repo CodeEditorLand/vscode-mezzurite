@@ -10,6 +10,7 @@ function onFileChanged(
 	project: Project,
 ): Promise<MezzuriteComponent[]> {
 	let updatedComponents: MezzuriteComponent[] = null;
+
 	return processFile(filePath, project)
 		.then((changedComponent: MezzuriteComponent) => {
 			if (changedComponent != null) {

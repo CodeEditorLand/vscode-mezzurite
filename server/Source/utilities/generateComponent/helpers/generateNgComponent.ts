@@ -19,6 +19,7 @@ function generateNgComponent(
 				filePath,
 				sourceClass,
 			);
+
 			const name = sourceClass.getName();
 
 			component = {
@@ -88,6 +89,7 @@ function getTemplate(decoratorArguments: Node[], filePath: string): string {
 			decoratorArgumentParameter.forEachChild((parameter: Node) => {
 				if (parameter != null) {
 					const parameterText = parameter.getText();
+
 					if (parameterText === "template") {
 						const templateValue = parameter
 							.getNextSiblings()
@@ -110,10 +112,12 @@ function getTemplate(decoratorArguments: Node[], filePath: string): string {
 									SyntaxKind.StringLiteral
 								);
 							});
+
 						if (templateUrlValue != null) {
 							const fileExtension = templateUrlValue
 								.getText()
 								.replace(/'/g, "");
+
 							const templateUrl = resolve(
 								filePath,
 								"..",
