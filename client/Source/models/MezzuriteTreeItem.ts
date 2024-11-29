@@ -16,6 +16,7 @@ class MezzuriteTreeItem extends TreeItem {
 		private rootPath: string,
 	) {
 		super(component.filePath, TreeItemCollapsibleState.Collapsed);
+
 		this.label = component.name;
 	}
 

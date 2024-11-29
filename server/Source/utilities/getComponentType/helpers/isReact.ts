@@ -6,6 +6,7 @@ function isReact(fileContents: string): boolean {
 
 		if (importIndex > 0) {
 			const importPortion = fileContents.substring(0, importIndex);
+
 			hasReactImport =
 				importPortion.indexOf(" React ") > 0 ||
 				importPortion.indexOf(" React,") > 0;

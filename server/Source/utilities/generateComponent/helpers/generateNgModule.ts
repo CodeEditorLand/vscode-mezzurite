@@ -70,6 +70,7 @@ function containsAngularPerfImport(sourceClass: ClassDeclaration): boolean {
 							hasImports = true;
 						}
 					}
+
 					return hasImports;
 				},
 			);
@@ -78,6 +79,7 @@ function containsAngularPerfImport(sourceClass: ClassDeclaration): boolean {
 				const imports = importNode.getFirstChildByKind(
 					SyntaxKind.ArrayLiteralExpression,
 				);
+
 				containsAngularPerfImport =
 					imports.getText().indexOf("AngularPerfModule.forRoot()") >
 					-1;

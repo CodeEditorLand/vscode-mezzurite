@@ -27,6 +27,7 @@ function onFileChanged(
 					},
 				);
 			}
+
 			return updatedComponents;
 		})
 		.catch((error: Error) => {

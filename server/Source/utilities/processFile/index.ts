@@ -20,13 +20,16 @@ function processFile(
 					if (componentType != null) {
 						const sourceFile =
 							project.addExistingSourceFile(filePath);
+
 						componentData = generateComponent(
 							componentType,
 							filePath,
 							sourceFile,
 						);
+
 						project.removeSourceFile(sourceFile);
 					}
+
 					resolve(componentData);
 				} else {
 					reject(error);

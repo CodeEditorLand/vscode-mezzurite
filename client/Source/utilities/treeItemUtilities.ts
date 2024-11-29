@@ -49,6 +49,7 @@ function generateIconPath(
 		}
 
 		const iconType = componentType + iconKind;
+
 		iconPath = join(rootPath, "client", "res", "icons", `${iconType}.svg`);
 	}
 

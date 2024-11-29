@@ -13,6 +13,7 @@ function combineWorkspaceFolders(folders: WorkspaceFolder[]): string[] {
 						return file != null;
 					},
 				);
+
 				filePaths = [...filePaths, ...folderFilePaths];
 			}
 		});

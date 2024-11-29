@@ -6,6 +6,7 @@ import MezzuriteTreeItem from "./MezzuriteTreeItem";
 class MezzuriteDataProvider implements TreeDataProvider<TreeItem> {
 	private _onDidChangeTreeData: EventEmitter<TreeItem> =
 		new EventEmitter<TreeItem>();
+
 	readonly onDidChangeTreeData: Event<TreeItem> =
 		this._onDidChangeTreeData.event;
 

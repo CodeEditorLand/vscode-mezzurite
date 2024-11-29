@@ -48,6 +48,7 @@ connection.onInitialized(() => {
 		.getWorkspaceFolders()
 		.then((folders: WorkspaceFolder[]) => {
 			const files = combineWorkspaceFolders(folders);
+
 			Promise.all(
 				files.map((filePath: string) => {
 					return processFile(filePath, project).catch(
@@ -65,6 +66,7 @@ connection.onInitialized(() => {
 					components = results.filter(
 						(component: MezzuriteComponent) => component != null,
 					);
+
 					connection.sendNotification("custom/mezzuriteComponents", {
 						value: components,
 					});
@@ -79,6 +81,7 @@ connection.onNotification("custom/fileChanged", (filePath: string) => {
 	onFileChanged(components, filePath, project)
 		.then((updatedComponents: MezzuriteComponent[]) => {
 			components = updatedComponents;
+
 			connection.sendNotification("custom/mezzuriteComponents", {
 				value: components,
 			});
@@ -90,6 +93,7 @@ connection.onNotification("custom/fileDeleted", (filePath: string) => {
 	components = components.filter((component: MezzuriteComponent) => {
 		return join(component.filePath) !== join(filePath);
 	});
+
 	connection.sendNotification("custom/mezzuriteComponents", {
 		value: components,
 	});
