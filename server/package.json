@@ -7,6 +7,6 @@
 	"devDependencies": {
 		"@types/globby": "9.1.0"
 	},
-	"name": "vscode-mezzurite-server",
+	"name": "@codeeditorland/mezzurite-server",
 	"scripts": {}
 }

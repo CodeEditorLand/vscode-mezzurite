@@ -1,9 +1,9 @@
 {
-	"dependencies": {},
+	"name": "@codeeditorland/mezzurite-client",
 	"description": "VSCode part of a language server",
-	"devDependencies": {},
-	"name": "vscode-mezzurite-client",
 	"scripts": {
 		"update-vscode": "vscode-install"
-	}
+	},
+	"dependencies": {},
+	"devDependencies": {}
 }
